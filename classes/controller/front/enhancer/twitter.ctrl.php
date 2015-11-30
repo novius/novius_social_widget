@@ -5,7 +5,6 @@ namespace Novius\Social\Widget;
 use Fuel\Core\Arr;
 use Nos\Controller_Front_Application;
 use Nos\Nos;
-use Parser\View;
 
 class Controller_Front_Enhancer_Twitter extends Controller_Front_Application
 {
