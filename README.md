@@ -1,4 +1,6 @@
-# novius_social_widget
+# Novius Social Widget
+
+This app add enhancers to add social media widgets on your website.
 
 ## Twitter
 
