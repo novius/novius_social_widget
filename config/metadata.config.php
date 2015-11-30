@@ -36,5 +36,17 @@ return array(
                 'ajax'       => true,
             ),
         ),
+        'social_widget_facebook_page' => array(
+            'title'      => 'Facebook Page',
+            'desc'       => '',
+            'enhancer'   => 'novius_social_widget/front/enhancer/facebook/page', // URL of the enhancer
+            'previewUrl' => 'admin/novius_social_widget/enhancer/facebook/preview', // URL of preview
+            'dialog'     => array(
+                'contentUrl' => 'admin/novius_social_widget/enhancer/facebook/popup',
+                'width'      => 450,
+                'height'     => 400,
+                'ajax'       => true,
+            ),
+        ),
     ),
 );

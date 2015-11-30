@@ -9,8 +9,7 @@ $config = array(
                     'begin'  => '<div>',
                     'end'    => '</div>',
                     'fields' => array(
-                        'widget-id',
-                        'limit',
+                        'url',
                         'width',
                         'height',
                     ),
@@ -19,55 +18,36 @@ $config = array(
         ),
     ),
     'fields' => array(
-        'widget-id' => array(
-            'label'      => __('Widget ID'),
+        'url'    => array(
+            'label'      => __('Page URL'),
             'validation' => array(
                 'required',
             ),
         ),
-        'limit'     => array(
-            'label' => __('Limit'),
-        ),
-        'width'     => array(
+        'width'  => array(
             'label' => __('Width'),
         ),
-        'height'    => array(
+        'height' => array(
             'label' => __('Height'),
         ),
     ),
 );
 
-$chrome = array(
-    'noheader'    => array(
-        'label' => 'Hide Header',
-    ),
-    'nofooter'    => array(
-        'label' => 'Hide Footer',
-    ),
-    'noborders'   => array(
-        'label' => 'Hide Borders',
-    ),
-    'noscrollbar' => array(
-        'label' => 'Hide Scrollbar',
-    ),
-    'transparent' => array(
-        'label' => 'Transparent',
-    ),
-);
+$chrome = \Novius\Social\Widget\Controller_Front_Enhancer_Facebook::getDataList();
 
 foreach ($chrome as $type => $params) {
-    $fieldname = "chrome-$type";
+    $fieldname = "data-$type";
 
     $config['popup']['layout']['fields']['params']['fields'][] = $fieldname;
 
     $fieldConfig                  = array(
         'label'    => __($params['label']),
         'template' => '{label} {field}<br>',
-        'form'     => array(
-            'type'  => 'checkbox',
-            'value' => 1,
-            'empty' => 0,
-        )
+        'form'     => \Arr::merge(array(
+                'type'  => 'checkbox',
+                'value' => 1,
+                'empty' => 0,
+            ), \Arr::get($params, 'form', array())),
     );
     $config['fields'][$fieldname] = $fieldConfig;
 }
