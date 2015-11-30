@@ -23,4 +23,18 @@ return array(
         32 => 'static/apps/novius_social_widget/img/icon/32.png',
         64 => 'static/apps/novius_social_widget/img/icon/64.png',
     ),
+    'enhancers'  => array(
+        'social_widget_twitter' => array(
+            'title'      => 'Twitter Widget',
+            'desc'       => '',
+            'enhancer'   => 'novius_social_widget/front/enhancer/twitter/main', // URL of the enhancer
+            'previewUrl' => 'admin/novius_social_widget/enhancer/twitter/preview', // URL of preview
+            'dialog'     => array(
+                'contentUrl' => 'admin/novius_social_widget/enhancer/twitter/popup',
+                'width'      => 450,
+                'height'     => 400,
+                'ajax'       => true,
+            ),
+        ),
+    ),
 );
