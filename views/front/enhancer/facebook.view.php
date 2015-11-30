@@ -1,8 +1,6 @@
 <div class="fb-page" data-href="<?= $url ?>"
-
     <?= !empty($width) ? "data-width='$width'" : '' ?>
     <?= !empty($height) ? "data-height='$height'" : '' ?>
-
     <?php
     if (!empty($data)) {
         foreach ($data as $key => $value) {

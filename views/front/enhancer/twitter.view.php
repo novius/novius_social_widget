@@ -3,5 +3,4 @@
     <?= !empty($limit) ? "data-tweet-limit='$limit'" : '' ?>
     <?= !empty($width) ? "width='$width'" : '' ?>
     <?= !empty($height) ? "height='$height'" : '' ?>
-
     ></a>
