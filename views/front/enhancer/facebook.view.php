@@ -1,4 +1,4 @@
-<div class="fb-page" data-href="<?= $url ?>" 
+<div class="fb-page" data-href="<?= $url ?>"
 
     <?= !empty($width) ? "data-width='$width'" : '' ?>
     <?= !empty($height) ? "data-height='$height'" : '' ?>
