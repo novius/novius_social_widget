@@ -16,7 +16,7 @@ return array(
     ),
     'namespace'  => 'Novius\Social\Widget',
     'permission' => array(),
-    'i18n_file'  => 'novius_social_widget::metadata',
+    'i18n_file'  => 'novius_social_widget::common',
     'launchers'  => array(),
     'icons'      => array(
         16 => 'static/apps/novius_social_widget/img/icon/16.png',

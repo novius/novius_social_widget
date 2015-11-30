@@ -1,4 +1,5 @@
 <?php
+\Nos\I18n::current_dictionary('novius_social_widget::common');
 
 $config = array(
     'popup'  => array(
